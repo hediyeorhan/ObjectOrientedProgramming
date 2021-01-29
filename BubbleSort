@@ -1,0 +1,81 @@
+import java.util.Scanner;
+
+public class BubbleSort {
+	public static void main(String[] args)
+	{
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.print("Dizinin boyutunu giriniz : ");
+		
+		int db = scanner.nextInt();
+		int[] dizi = new int[db];
+		
+		for(int i=0; i<db; i++)
+		{
+			System.out.print(i + ". elemani giriniz : ");
+			dizi[i] = scanner.nextInt();
+		}
+		
+		for(int i=0; i<db; i++)
+		{
+			System.out.println(i + ". eleman : " + dizi[i]);
+		}
+		
+		
+		BubbleSortKB(dizi);
+		System.out.println("-----------------------------------------------");
+		
+		System.out.println("-- Dizinin kucukten buyuge sirali hali --");
+		for(int i=0; i<db; i++)
+		{
+			System.out.println(i + ". eleman : " + dizi[i]);
+		}
+		
+		
+		BubbleSortBK(dizi);
+		System.out.println("-----------------------------------------------");
+		
+		System.out.println("-- Dizinin buyukten kucuge sirali hali --");
+		for(int i=0; i<db; i++)
+		{
+			System.out.println(i + ". eleman : " + dizi[i]);
+		}
+	}
+
+	private static void BubbleSortBK(int[] dizi) {
+		int temp;
+		for(int i=0; i<dizi.length; i++)
+		{
+			for(int j=0; j<dizi.length-1; j++)
+			{
+				if(dizi[j] < dizi[j+1])
+				{
+					temp = dizi[j];
+					dizi[j] = dizi[j+1];
+					dizi[j+1] = temp;
+				}
+			}
+		}
+		
+	}
+
+	private static void BubbleSortKB(int[] dizi) 
+	{
+		
+		int temp;
+		for(int i=0; i<dizi.length; i++)
+		{
+			for(int j=0; j<dizi.length-1; j++)
+			{
+				if(dizi[j] > dizi[j+1])
+				{
+					temp = dizi[j];
+					dizi[j] = dizi[j+1];
+					dizi[j+1] = temp;
+				}
+			}
+		}
+		
+	}
+
+}
