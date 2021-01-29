@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class main {
 	public static void main(String[] args)
 	{
-		System.out.println("Týrnak sayisi : " + MaxTirnak("mer\"h\"a\"b\"\"a\"\"\""));
+		System.out.println("Tirnak sayisi : " + MaxTirnak("mer\"h\"a\"b\"\"a\"\"\""));
 	}
 	
 	public static int MaxTirnak(String input)
@@ -22,6 +22,7 @@ public class main {
 				{
 					tut = sayac;
 				}
+				sayac = 0;
 	            
 			}
 				
