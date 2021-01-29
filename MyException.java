@@ -24,3 +24,25 @@ public class Main {
 	}
 
 }
+
+
+// CLASS MYEXCEPTION
+
+
+public class MyException extends Exception{
+	private int sayac;
+	
+	MyException(int a) // constructor
+	{
+		sayac = a;
+	}
+	
+	
+	public String toString()
+	{
+		return "MyException[" + sayac + "]";
+	}
+	
+
+}
+
