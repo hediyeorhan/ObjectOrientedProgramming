@@ -1,4 +1,5 @@
 
+// CLASS MAIN
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -103,7 +104,7 @@ public class Anasayfa {
 			System.out.println("\t\t5) Kursiyer Silme");
 			System.out.println("\t\t6) Kursiyer Listele");
 			System.out.println("\t\t7) Kursiyer Ayrintili Listele");
-			System.out.println("\t\t8) Kursiyerin Ödeyeceði Tutar Hesaplama");
+			System.out.println("\t\t8) Kursiyerin Ã–deyeceÃ°i Tutar Hesaplama");
 			System.out.println("\t\t9) Cikis");
 			System.out.println("\t\t--------------------------------------");
 			System.out.println("Menu giriniz : ");
@@ -316,4 +317,79 @@ public class Anasayfa {
 	}
 }
 
+// CLASS KURS
+
+
+public class Kurs {
+	private int kursId;
+	private String kursAd;
+	
+	public Kurs(int kursId, String kursAd) {
+		super();
+		this.kursId = kursId;
+		this.kursAd = kursAd;
+	}
+
+	public int getKursId() {
+		return kursId;
+	}
+
+	public void setKursId(int kursId) {
+		this.kursId = kursId;
+	}
+
+	public String getKursAd() {
+		return kursAd;
+	}
+
+	public void setKursAd(String kursAd) {
+		this.kursAd = kursAd;
+	}
+	
+	
+
+}
+
+// CLASS KURSIYER
+
+import java.util.*;
+
+public class Kursiyer {
+	private int kursiyerId;
+	private String kursiyerAdSoyad;
+	private int kursiyerYas;
+	public List<Kurs> alinanKurslar;
+	
+	
+	public Kursiyer(int kursiyerId, String kursiyerAdSoyad, int kursiyerYas, List<Kurs> alinanKurslar) {
+
+		this.kursiyerId = kursiyerId;
+		this.kursiyerAdSoyad = kursiyerAdSoyad;
+		this.kursiyerYas = kursiyerYas;
+		this.alinanKurslar = alinanKurslar;
+	}
+	
+
+	public int getKursiyerId() {
+		return kursiyerId;
+	}
+	public void setKursiyerId(int kursiyerId) {
+		this.kursiyerId = kursiyerId;
+	}
+	public String getKursiyerAdSoyad() {
+		return kursiyerAdSoyad;
+	}
+	public void setKursiyerAdSoyad(String kursiyerAdSoyad) {
+		this.kursiyerAdSoyad = kursiyerAdSoyad;
+	}
+	public int getKursiyerYas() {
+		return kursiyerYas;
+	}
+	public void setKursiyerYas(int kursiyerYas) {
+		this.kursiyerYas = kursiyerYas;
+	}
+	
+	
+
+}
 
