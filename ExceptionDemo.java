@@ -11,34 +11,34 @@ public class Main {
 		try {
 			procA();
 			} catch (Exception e) {
-			System.out.println("Exc. yakalanýyor");
+			System.out.println("Exc. yakalanÃ½yor");
 			}
 			procB();
 			procC();
 	}
 	
-	static void procA() {// metot dýþýnda excption
+	static void procA() {// metot dÃ½Ã¾Ã½nda excption
 		try {
-		System.out.println("procA içinde");
+		System.out.println("procA iÃ§inde");
 		throw new RuntimeException("demo");
 		} finally {
 		System.out.println("procA's finally");
 		}
 		}
 	
-	// Bir try bloðundan geri dön
+	// Bir try bloÃ°undan geri dÃ¶n
 	static void procB() {
 	try {
-	System.out.println("procB içinde");
+	System.out.println("procB iÃ§inde");
 	return;
 	} finally {
 	System.out.println("procB'deki finally");
 	}
 	}
-	// Bir try bloðunu normal iþle.
+	// Bir try bloÃ°unu normal iÃ¾le.
 	static void procC() {
 	try {
-	System.out.println("procC içinde");
+	System.out.println("procC iÃ§inde");
 	} finally {
 	System.out.println("procC'deki finally");
 	}
