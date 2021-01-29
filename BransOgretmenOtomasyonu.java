@@ -1,4 +1,6 @@
-/*import java.util.Scanner;
+// CLASS MAIN
+
+import java.util.Scanner;
 
 public class Anasayfa_1887 {
 	public static void main(String[] args)
@@ -128,6 +130,7 @@ public class Anasayfa_1887 {
 
 }
 
+// CLASS OGRETMEN
 public class Ogretmen_1887 {
 	public String ad;
 	public String soyad;
@@ -163,6 +166,7 @@ public class Ogretmen_1887 {
 
 }
 
+// CLASS MATEMATIKOGRETMENI
 public class MatematikOgretmeni_1887 extends Ogretmen_1887{
 	
 	private int id;
@@ -193,6 +197,7 @@ public class MatematikOgretmeni_1887 extends Ogretmen_1887{
 	
 
 }
+// RESIMOGRETMENI
 public class ResimOgretmeni_1887 extends Ogretmen_1887{
 	
 	private int id;
@@ -219,4 +224,4 @@ public class ResimOgretmeni_1887 extends Ogretmen_1887{
 		System.out.println("ResimOgretmeni_1887 sinifinin nesnesi");
 	}
 
-}*/
+}
