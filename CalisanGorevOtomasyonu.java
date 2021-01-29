@@ -1,4 +1,6 @@
-/*public abstract class Calisan_1887 {
+// CLASS CALISAN
+
+public abstract class Calisan_1887 {
 	public int id;
 	public String ad;
 	public String soyad;
@@ -20,6 +22,7 @@
 
 }
 
+// CLASS ISCI
 
 public class Isci_1887 extends Calisan_1887 implements Maas_1887 {
 	
@@ -48,7 +51,7 @@ public class Isci_1887 extends Calisan_1887 implements Maas_1887 {
 
 }
 
-
+// INTERFACE
 
 public interface Maas_1887 {
 	public abstract double MaasHesapla();
@@ -65,7 +68,7 @@ import java.util.Scanner;
 
 
 
-
+// CLASS ANASAYFA
 
 public class Anasayfa_1887 {
 
@@ -125,4 +128,4 @@ public class Anasayfa_1887 {
 		bw.close();
 	}
 
-}*/
+}
