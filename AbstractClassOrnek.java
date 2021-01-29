@@ -1,3 +1,4 @@
+// CLASS MAIN
 package Hazirlik4;
 
 import java.util.Scanner;
@@ -108,6 +109,112 @@ public class Main {
 			muhendisler[i].BilgileriYazdir();
 		}
 		
+	}
+
+}
+
+// ABSTRACT CLASS MUHENDIS
+
+package Hazirlik4;
+
+public abstract class Muhendis {
+	
+	public String ad, brans;
+	public int yas, puan;
+	
+	
+	public Muhendis(String ad, int yas) {
+		this.ad = ad;
+		this.yas = yas;
+		this.brans = "Muhendis";
+	}
+	
+	public void BilgileriYazdir()
+	{
+		System.out.println("\n\t -- MUHENDIS SINIFI -- \n");
+		System.out.println("AD : " + ad);
+		System.out.println("Brans : " + brans);
+		System.out.println("Yas : " + yas);
+		System.out.println("Puan : " + PuanHesapla());
+	}
+
+	public abstract int PuanHesapla();
+	
+	
+
+}
+
+// CLASS MM
+package Hazirlik4;
+
+public class MM extends Muhendis{
+
+	public MM(String ad, int yas) {
+		super(ad, yas);
+		this.brans = "Makine Muhendisi";
+	}
+	
+	public void BilgileriYazdir()
+	{
+		System.out.println("\n\t -- MAKINE MUHENDISI SINIFI -- \n");
+		System.out.println("AD : " + ad);
+		System.out.println("Brans : " + brans);
+		System.out.println("Yas : " + yas);
+		System.out.println("Puan : " + PuanHesapla());
+	}
+	
+	public int PuanHesapla() {
+		return this.yas * 3;
+	}
+
+
+}
+
+// CLASS EM 
+package Hazirlik4;
+
+public class EM extends Muhendis{
+
+	public EM(String ad, int yas) {
+		super(ad, yas);
+		this.brans = "Elektrik Muhendisi";
+	}
+
+	public void BilgileriYazdir()
+	{
+		System.out.println("\n\t -- ELEKTRIK MUHENDISI SINIFI -- \n");
+		System.out.println("AD : " + ad);
+		System.out.println("Brans : " + brans);
+		System.out.println("Yas : " + yas);
+		System.out.println("Puan : " + PuanHesapla());
+	}
+
+	public int PuanHesapla() {
+		return this.yas * 5;
+	}
+}
+
+// CLASS BM
+package Hazirlik4;
+
+public class BM extends Muhendis{
+
+	public BM(String ad, int yas) {
+		super(ad, yas);
+		this.brans = "Bilgisayar Muhendisi";
+	}
+	
+	public void BilgileriYazdir()
+	{
+		System.out.println("\n\t -- BILGISAYAR MUHENDISI SINIFI -- \n");
+		System.out.println("AD : " + ad);
+		System.out.println("Brans : " + brans);
+		System.out.println("Yas : " + yas);
+		System.out.println("Puan : " + PuanHesapla());
+	}
+
+	public int PuanHesapla() {
+		return this.yas * 4;
 	}
 
 }
